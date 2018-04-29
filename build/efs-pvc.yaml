@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  namespace: build
+  name: efs
+spec:
+  accessModes:
+  - ReadWriteMany
+#  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 50Gi
+  storageClassName: ''
+  volumeName: efs
